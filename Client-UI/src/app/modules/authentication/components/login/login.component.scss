@@ -1,0 +1,27 @@
+.login__container {
+    height: 100%;
+    width: 100%;
+
+    .container__title {
+        font-size: 46px;
+    }
+
+    .container__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            .form-field {
+                width: 80%;
+            }
+    }
+
+    .login__footer {
+        margin-top: 20px;
+        .footer__buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}

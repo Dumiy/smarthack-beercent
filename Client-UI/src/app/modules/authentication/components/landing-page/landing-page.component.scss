@@ -1,0 +1,60 @@
+:root {
+    height: 100%;
+    width: 100%;
+}
+.landing-page__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .container__auth {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .auth__logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .auth__logo {
+                display: flex;
+                align-items: center;
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .logo__icon {
+            font-size: 70px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .auth__panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+            width: 60%;
+            background-color: white;
+            border-radius: 5px;
+
+            .panel__btn {
+                min-width: 150px;
+            }
+
+            .panel__btn:not(:first-child) {
+                margin-top: 15px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,47 @@
+:host {
+    width: 100%;
+}
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        margin-top: 15px;
+    }
+
+
+    .search__input {
+        width: 70%;
+    }
+
+    .search__input-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search__checkboxes-group {
+        display: flex;
+
+        .checkboxes__group {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+        }
+
+        .group {
+            &__title{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            &__list {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.search-button {
+    margin-top: 20px;
+}

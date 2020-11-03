@@ -1,0 +1,37 @@
+<div class="register__container">
+    <span style="font-size: 25px; margin-bottom: 30px;">Register</span>
+
+    <form class="container__form" [formGroup]="registerFormGroup">
+        <mat-form-field class="form-field">
+            <mat-label>Username</mat-label>
+
+            <input matInput [formControlName]="USER_NAME_CONTROL_NAME">
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+
+            <input matInput type="email" [formControlName]="EMAIL_CONTROL_NAME">
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <mat-label>Password</mat-label>
+
+            <input matInput type="password" [formControlName]="PASSWORD_CONTROL_NAME">
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <mat-label>Confirm Password</mat-label>
+
+            <input matInput type="password" [formControlName]="CONFIRM_PASSWORD_CONTROL_NAME">
+        </mat-form-field>
+    </form>
+
+    <div class="register__footer">
+        <div class="footer__buttons">
+            <button mat-stroked-button (click)="close()">CLOSE</button>
+
+            <button mat-stroked-button class="btn-primary" [disabled]="registerFormGroup.invalid" (click)="submit()">REGISTER</button>
+        </div>
+    </div>
+</div>

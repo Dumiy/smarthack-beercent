@@ -1,0 +1,46 @@
+<form [formGroup]="formGroup" class="search__container">
+    <div class="search__input-container">
+        <mat-icon>search</mat-icon>
+    
+        <mat-form-field class="search__input">
+            <mat-label>Search product*</mat-label>
+    
+            <input matInput formControlName="search">
+
+            <mat-error>Main keyword is required</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="search__checkboxes-group" *ngIf="selectedProductType">
+        <div class="checkboxes__group">
+            <span class="group__title">Choose a brand*:</span>
+    
+            <mat-checkbox class="group__list"
+                *ngFor="let brand of selectedProductType.brands"
+                [checked]="selectedBrand === brand"
+                (change)="selectedBrand = brand">{{brand}}</mat-checkbox>
+        </div>
+    
+        <div class="checkboxes__group">
+            <span class="group__title">Choose a price range (LEI)*:</span>
+    
+            <mat-checkbox class="group__list"
+                *ngFor="let price of selectedProductType.prices"
+                [checked]="selectedPrice === price"
+                (change)="selectedPrice = price">{{price}}</mat-checkbox>
+        </div>
+    </div>
+
+    <mat-form-field *ngIf="selectedProductType" class="search__input">
+        <mat-label>Additional keywords(separated by coma)</mat-label>
+
+        <input matInput formControlName="keywords">
+
+        <mat-error>Keywords must be separated through coma!</mat-error>
+    </mat-form-field>
+</form>
+
+<button class="search-button btn-primary"
+    [disabled]="formGroup.invalid || !selectedBrand || !selectedPrice"
+    mat-stroked-button
+    (click)="emitSearchEvent()">Search a product</button>

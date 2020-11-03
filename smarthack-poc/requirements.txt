@@ -1,0 +1,6 @@
+requests
+bs4
+flask-restful
+Flask-API
+pyodbc
+flask-cors

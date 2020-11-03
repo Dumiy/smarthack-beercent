@@ -1,0 +1,31 @@
+<div class="home__container" [ngClass]="{'find-container': !productList.length, 'list-container': productList.length}">
+    <ng-template [ngIf]="!productList.length && !isLoading" [ngIfElse]="data">
+        <div class="container__one">
+            <h1>Welcome back to Shopwire, {{authService.getUsername()}}!</h1>
+
+            <div class="home__search-container">
+                <h3>Wanna buy something? Let us rate it first:</h3>
+
+                <app-search (searchEmitter)="getProductList($event)" class="home__search"></app-search>
+            </div>
+        </div>
+
+        <div class="home__image">
+            <img width="500" height="600" src="../../../../../assets/analysis.svg">
+        </div>
+    </ng-template>
+
+    <ng-template #data>
+        <ng-template [ngIf]="productList.length" [ngIfElse]="loading">
+            <button mat-stroked-button class="btn-primary back-button" (click)="clearData()">
+                <mat-icon style="font-size: 20px;">arrow_left</mat-icon>Go Back
+            </button>
+
+            <app-product-list [productList]="productList"></app-product-list>
+        </ng-template>
+
+        <ng-template #loading>
+            <mat-spinner [diameter]="70"></mat-spinner>
+        </ng-template>
+    </ng-template>
+</div>

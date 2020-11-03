@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ActiveDebugProfile>Docker</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>Smarthack2020ACR</NameOfLastUsedPublishProfile>
+    <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
+    <Controller_SelectedScaffolderCategoryPath>root/Controller</Controller_SelectedScaffolderCategoryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <DevSpacesDebugProfileUserSetting Include="Bridge to Kubernetes">
+      <AccountId>44df676b-f6ae-6564-bdbb-eed943b316bb</AccountId>
+      <TenantId>08a1a72f-fecd-4dae-8cec-471a2fb7c2f1</TenantId>
+      <SpaceName>default</SpaceName>
+      <ServiceName>connector</ServiceName>
+      <RoutingHeader>
+      </RoutingHeader>
+      <LaunchUrl>
+      </LaunchUrl>
+      <LocalLaunchProfile>ConnectorAPI</LocalLaunchProfile>
+    </DevSpacesDebugProfileUserSetting>
+  </ItemGroup>
+</Project>

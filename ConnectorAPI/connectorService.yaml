@@ -1,0 +1,22 @@
+# connectorService.yml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: connector
+  name: connector
+spec:
+  ports:
+    - port: 8080
+      name: http
+      protocol: TCP
+      targetPort: 80
+    - port: 8443
+      name: https
+      protocol: TCP
+      targetPort: 443
+  selector:
+    app: connector
+    component: netcore-app
+  type: LoadBalancer
+

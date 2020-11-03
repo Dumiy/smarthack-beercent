@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav opened mode="side" class="sidenav">
+        <div class="sidenav__items-wrapper">
+            <div class="logo__wrapper">
+                <mat-icon class="sidenav__logo">polymer</mat-icon>
+
+                <h3>SHOPWIRE</h3>
+            </div>
+
+            <mat-nav-list class="items__nav-list">
+                <div class="items__group-list">
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/find'">
+                        <mat-icon class="item__icon">search</mat-icon>Find
+                    </a>
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/profile'">
+                        <mat-icon class="item__icon">account_box</mat-icon>My Profile
+                    </a>
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/history'">
+                        <mat-icon class="item__icon">history</mat-icon>History
+                    </a>
+                </div>
+
+                <div class="items__group-list">
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/pricing'">
+                        <mat-icon class="item__icon">payments</mat-icon>Pricing
+                    </a>
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/about'">
+                        <mat-icon class="item__icon">live_help</mat-icon>About Us
+                    </a>
+                    <a mat-list-item [routerLinkActive]="['item--active']" [routerLink]="'/terms'">
+                        <mat-icon class="item__icon">policy</mat-icon>Terms and Conditions
+                    </a>
+                </div>
+                <!-- <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
+              </mat-nav-list>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="display: none"></mat-sidenav-content>
+  </mat-sidenav-container>

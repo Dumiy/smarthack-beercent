@@ -1,0 +1,47 @@
+:host {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.find-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home__container {
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+
+    .back-button {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        height: 50px;
+        width: fit-content;
+    }
+
+    .container__one {
+        width: 100%;
+        .home__search-container {
+            .home__search {
+                .search__input {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .home__image {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}

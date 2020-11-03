@@ -1,0 +1,6 @@
+<div class="product-list">
+    <app-product-card *ngFor="let product of productList"
+        [name]="product.name"
+        [url]="product.url"
+        [score]="product.score"></app-product-card>
+</div>

@@ -1,0 +1,7 @@
+<app-sidenav *ngIf="authenticationService.isLoggedIn()"></app-sidenav>
+
+<div class="app-content">
+    <app-toolbar *ngIf="authenticationService.isLoggedIn()"></app-toolbar>
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,17 @@
+:host {
+    height: 100px;
+    width: 100%;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn__profile {
+        margin-right: 10px;
+    }
+
+    .btn__sign-out {
+        color: red;
+    }
+}

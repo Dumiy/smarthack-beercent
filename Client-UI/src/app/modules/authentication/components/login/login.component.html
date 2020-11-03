@@ -1,0 +1,29 @@
+<div class="login__container">
+    <span style="font-size: 25px; margin-bottom: 30px;">Login</span>
+
+    <form class="container__form" [formGroup]="loginFormGroup">
+        <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+
+            <input matInput type="email" [formControlName]="EMAIL_CONTROL_NAME">
+
+            <mat-error>Email should have at least 6 characters!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <mat-label>Password</mat-label>
+
+            <input matInput type="password" [formControlName]="PASSWORD_CONTROL_NAME">
+
+            <mat-error>Pass should have at least 2 characters!</mat-error>
+        </mat-form-field>
+    </form>
+
+    <div class="login__footer">
+        <div class="footer__buttons">
+            <button mat-stroked-button (click)="close()">CANCEL</button>
+
+            <button mat-stroked-button class="btn-primary" [disabled]="loginFormGroup.invalid" (click)="submit()">LETS GO</button>
+        </div>
+    </div>
+</div>

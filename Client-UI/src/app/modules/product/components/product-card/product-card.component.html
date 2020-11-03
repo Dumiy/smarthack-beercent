@@ -1,0 +1,25 @@
+<mat-card class="product-card">
+    <img class="product-card__image" mat-card-image width="100" height="100" src="../../../../../assets//card-default-image.svg" alt="Default Image">
+
+    <mat-card-content class="product-card__content">
+        <div class="content__container">
+            <div class="content__text">
+                <h4 class="text__first">{{name}}</h4>
+
+                <span class="text__secondary">Technology</span>
+            </div>
+
+            <div class="content__score">
+                <span>{{score}}</span>
+
+                <span [ngStyle]="{'background-color': getBubbleColorScore()}" class="score__dot"></span>
+            </div>
+        </div>
+
+        <h4>{{url}}</h4>
+    </mat-card-content>
+
+    <mat-card-actions class="product-card__actions">
+      <button mat-stroked-button class="btn-primary" (click)="goToLink()">GO TO LINK</button>
+    </mat-card-actions>
+</mat-card>

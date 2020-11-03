@@ -1,0 +1,15 @@
+# pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: searchengine-api
+  labels:
+    app: searchengine
+    component: python-app
+spec:
+  containers:
+    - image: smarthack2020acr.azurecr.io/smarthackpoc
+      name: searchengine-api
+      ports:
+        - containerPort: 80
+        - containerPort: 443

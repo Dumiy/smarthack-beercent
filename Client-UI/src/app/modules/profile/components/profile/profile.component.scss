@@ -1,0 +1,40 @@
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &__side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .side__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+            font-size: 30px;
+            height: 75px;
+
+            .category {
+                font-size: 20px;
+                color: grey;
+            }
+        }
+
+        .panel__info {
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+    }
+
+        
+        &__side:not(:first-child) {
+            margin-left: 50px;
+        }
+}

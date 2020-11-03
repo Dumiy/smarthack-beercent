@@ -1,0 +1,28 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - ConnectorAPI/*
+resources:
+- repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'ca1f8dc9-4d61-4608-826f-77c0713b06a0'
+  imageRepository: 'connectorapi'
+  containerRegistry: 'smarthack2020acr.azurecr.io'
+  dockerfilePath: './ConnectorAPI/ConnectorAPI/Dockerfile'
+  tag: '$(Build.BuildId)'
+  imagePullSecret: 'smarthack2020acr13414f8f-auth'
+  k8sNamespace: 'default'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+  

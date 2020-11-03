@@ -1,0 +1,5 @@
+<mat-toolbar class="toolbar">
+    <button mat-button class="btn__profile" routerLink="/profile">{{authService.getUsername()}}</button>
+
+    <button mat-stroked-button class="btn__sign-out" (click)="authService.logout()">Sign Out</button>
+</mat-toolbar>
